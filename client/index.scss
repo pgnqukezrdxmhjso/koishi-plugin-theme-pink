@@ -1,0 +1,27 @@
+@use "sass:color";
+
+:root,
+.theme-root {
+  @mixin apply-color-light($name, $base) {
+    --k-color-#{$name}: #{$base};
+    --k-color-#{$name}-shade: #{color.mix($base, #000, 90%)};
+    --k-color-#{$name}-tint: #{color.mix($base, #fff, 80%)};
+    --k-color-#{$name}-fade: #{color.adjust($base, $alpha: -0.9)};
+  }
+
+  &[theme="pink-light"] {
+    $bg: #fdeef5;
+    $hover: #e9dbe1;
+    --bg0: #{$bg};
+    --bg1: #{$hover};
+    --bg2: #{$hover};
+    --bg3: #{$hover};
+
+    --k-side-bg: var(--bg0);
+    --k-activity-bg: var(--bg0);
+
+    --k-color-divider: #e9dbe1;
+    --k-card-shadow: 0 4px 8px -4px rgb(0 0 0 / 0.3);
+    @include apply-color-light(primary, #f172b3);
+  }
+}

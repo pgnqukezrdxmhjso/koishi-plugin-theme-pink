@@ -1,22 +1,59 @@
 {
   "name": "koishi-plugin-theme-pink",
   "description": "pink theme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "scripts": {
+    "bump": "cd ../../ && yarn bump -3 theme-pink",
+    "build": "cd ../../ && yarn build theme-pink",
+    "pub": "cd ../../ && yarn pub theme-pink",
+    "up": "npx npm-check -u --no-color"
+  },
   "files": [
     "lib",
     "dist"
   ],
+  "contributors": [
+    "pgnqukezrdxmhjso"
+  ],
+  "homepage": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-theme-pink",
+  "bugs": {
+    "url": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-theme-pink/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgnqukezrdxmhjso/koishi-plugin-theme-pink.git"
+  },
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "theme",
+    "pink"
   ],
-  "devDependencies": {},
   "peerDependencies": {
+    "@koishijs/plugin-console": "^5.30.11",
     "koishi": "^4.18.10"
+  },
+  "devDependencies": {
+    "@koishijs/client": "^5.30.11"
+  },
+  "koishi": {
+    "description": {
+      "en-US": "pink theme",
+      "fr-FR": "Thème rose",
+      "ja-JP": "ピンクテーマ",
+      "ko-KR": "핑크 테마",
+      "ru-RU": "Розовая тема",
+      "zh-CN": "粉色主题",
+      "zh-TW": "粉色主題"
+    },
+    "services": {
+      "required": [
+        "console"
+      ]
+    }
   }
 }
