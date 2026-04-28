@@ -12,6 +12,7 @@
   &[theme="pink-light"] {
     $bg: #fdeef5;
     $hover: #e9dbe1;
+    $color: #f172b3;
     --bg0: #{$bg};
     --bg1: #{$hover};
     --bg2: #{$hover};
@@ -22,6 +23,16 @@
 
     --k-color-divider: #e9dbe1;
     --k-card-shadow: 0 4px 8px -4px rgb(0 0 0 / 0.3);
-    @include apply-color-light(primary, #f172b3);
+    @include apply-color-light(primary, $color);
+
+    .el-button:hover {
+      color: #{$color};
+    }
+    .el-button--primary {
+      $bgc: color.scale($color, $lightness: -30%, $saturation: -0%);
+      --el-button-active-text-color: #{$bg};
+      --el-button-active-bg-color: #{$bgc};
+      --el-button-active-border-color: #{$bgc};
+    }
   }
 }

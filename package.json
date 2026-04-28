@@ -1,13 +1,12 @@
 {
   "name": "koishi-plugin-theme-pink",
   "description": "pink theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "bump": "cd ../../ && yarn bump -3 theme-pink",
     "build": "cd ../../ && yarn build theme-pink",
-    "pub": "cd ../../ && yarn pub theme-pink",
     "up": "npx npm-check -u --no-color"
   },
   "files": [
