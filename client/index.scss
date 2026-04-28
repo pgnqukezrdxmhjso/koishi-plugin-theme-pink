@@ -25,8 +25,8 @@
     --k-card-shadow: 0 4px 8px -4px rgb(0 0 0 / 0.3);
     @include apply-color-light(primary, $color);
 
-    .el-button:hover {
-      color: #{$color};
+    .el-button {
+      --el-button-hover-text-color: #{$color};
     }
     .el-button--primary {
       $bgc: color.scale($color, $lightness: -30%, $saturation: -0%);
